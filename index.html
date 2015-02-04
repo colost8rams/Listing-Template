@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>DOBOYO ReFASHION</title>
+	
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700' rel='stylesheet' type='text/css'>
+
+
+<style>
+
+	body {
+		
+	}
+
+	.listing-template {
+		max-width: 750px;
+		background-color: #7496a7;
+		border: 1px solid #000;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.listing-template .section-hdr {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.listing-template .section-hdr .top-logo {
+		max-width:350px;
+		/*margin-left: 200px;*/
+	}
+
+	.listing-template .nav-bar {
+		width:748px;
+	}
+
+	.listing-template .nav-bar ul {
+		padding-left: 2px;
+		padding-right: 5px;
+	}
+
+	.listing-template .nav-bar a {
+  		color: #D7E3E9;
+  		font-family: oswald, sans-serif;
+  		font-size: 14px;
+  		font-weight: 300;
+  		padding: 8px;
+    	text-transform: uppercase;
+	}
+
+	.listing-template .nav-bar li {
+		display:inline-block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border: 1px solid #D7E3E9;
+	}
+
+	.listing-template .nav-bar li:hover {
+    	background-color:#2B596F;
+	}
+
+	.listing-template .listing-content {
+		padding-top:15px;
+		padding-bottom: 15px;
+		border: 0px solid #D7E3E9;
+	}
+
+	.listing-template .listing-content .gallery-container {
+		height: 600px;
+		width:420px;
+		border: 1px solid #D7E3E9;
+		float:left;
+	}
+
+	.listing-template .listing-content .gallery-container .big-pic-box {
+		height: 404px;
+		width:404px;
+		position:relative; 
+		left:5px; 
+		top:5px; 
+		background-color:#2B596F;
+		border: 1px solid #D7E3E9;
+	}
+
+	.listing-template .listing-content .gallery-container .default {
+		position:relative; 
+		left:0px; 
+		top:0px; 
+		border:1px solid #D7E3E9; 
+		opacity: 0.25;
+		z-index:0;
+		max-height: 402px;
+		max-width: 402px;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set {
+		position:relative; 
+		height:150px;
+		width:404px;
+		left:5px; 
+		top:30px; 
+		/*background-color:#2B596F;
+		border: 1px solid #D7E3E9;*/
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set ul {
+		list-style:none; 
+		padding:5px; 
+		margin:0;
+		float:left;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li {
+		display:inline; width:65px; height:65px; float:left; padding-left:5px;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a {
+		display:block; width:55px; height:55px; text-decoration:none; padding:0px; border:1px solid #fff;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a .small-thumb {
+		width:53px; height:53px; border:0;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a .big-pic {
+		max-height: 400px;
+		max-width: 400px;
+
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a:hover,
+	.listing-template .listing-content .gallery-container .thumb-set li a:active,
+	.listing-template .listing-content .gallery-container .thumb-set li a:focus {
+		white-space:normal; 
+		border-color:#2B596F; 
+		outline:0;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a span {
+		position:absolute; left:-9999px; display:block; width:400px; height:400px; background:#2B596F; 
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a span .testing {display:block; width:400px; height:400px; text-align:center; display:table-cell; vertical-align:middle;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a:hover span {
+		position:absolute; left:2px; top:-427px; z-index:100;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a:active span,
+	.listing-template .listing-content .gallery-container .thumb-set li a:focus span {
+		position:absolute; left:2px; top:-427px; 
+	}
+
+	.listing-template .listing-content .item-details {
+		height:600px;
+		width: 281px;
+		border: 0px solid #D7E3E9;
+		margin-left: 15px;
+		padding:5px;
+		float:left;
+	}
+
+	.listing-template .listing-content .item-details h1 {
+    	font-family: 'Oswald', sans-serif;
+    	color:#D7E3E9;
+    	font-size: 24px;
+    	font-weight: 600;
+    	text-align: justify;
+    	padding-bottom: 0px;
+    	line-height:0.75;
+	}
+
+	.listing-template .listing-content .item-details h3 {
+		font-family: 'Oswald', sans-serif;
+    	color:#9e3754;
+    	font-size: 20px;
+    	font-weight: 400;
+    	padding-top: 0;
+    	padding-bottom: 10px;
+    	line-height:0.75;
+	}
+
+	.listing-template .listing-content .item-details .nav-tabs .active a {
+    	background-color: #2B596F;
+    	color:#D7E3E9;
+    	border-color: #D7E3E9;
+	} 
+
+	.listing-template .listing-content .bottom-notes {
+		width:600px;
+		height:275px;
+		border: 0px solid #D7E3E9;
+		margin-top: 15px
+	}
+
+	.listing-template .listing-content .bottom-notes .nav-tabs .active a {
+    	background-color: #2B596F;
+    	color:#D7E3E9;
+    	border-color: #D7E3E9;
+	} 
+	
+</style>
+	</head>
+	<body>
+		<div class="listing-template">
+
+			<div class="section-hdr">
+				<img class="top-logo center-block" src="http://i76.photobucket.com/albums/j39/christopherepearson1/Web%20Graphics/logo3_zpsa8816cd3.png" border="0" alt="logo"/>
+			</div>
+
+			<div class="nav-bar">
+				<div class="container">
+					<ul style="float:left">
+						<li><a target="_blank" href="http://stores.ebay.com/doboyo_Maternity-Fashion_W0QQfsubZ5511741012">maternity</a></li>
+				        <li><a target="_blank" href="http://stores.ebay.com/doboyo_Womens-Fashion_W0QQfsubZ5511742012">women's</a></li>
+				        <li><a target="_blank" href="http://stores.ebay.com/doboyo_Mens-Fashion_W0QQfsubZ5511743012">men's</a></li>
+				        <li><a target="_blank" href="http://stores.ebay.com/doboyo_Youth-Fashion_W0QQfsubZ5511744012">youth</a></li>
+				        <li><a target="_blank" href="http://stores.ebay.com/doboyo_Baby_W0QQfsubZ5511745012">baby</a></li>
+				        <li><a target="_blank" href="http://stores.ebay.com/doboyo_Household_W0QQfsubZ5511751012">houshold</a></li>
+				        <!-- <li><a href="#">media</a></li>
+				        <li><a href="#">misc. debris</a></li> -->
+	        		</ul>
+	        	    <ul style="float:right">
+	          			<!-- <li><a href="#">SALE ITEMS</a></li> -->
+	          			<li><a target="_blank" href="http://stores.ebay.com/doboyo">STORE HOME</a></li>		        
+	        		</ul>
+	        	</div>
+	        </div>
+
+	        <div class="listing-content">
+	        <div class="container">	
+	        	<div class="gallery-container">
+	        		<div class="big-pic-box">
+	        			<img class="default" src="http://placehold.it/400" alt="" />
+		        	</div>
+		        	<div class="thumb-set">
+			        	<ul >
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-01-m_zps3e6ef52c.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-01-m_zps3e6ef52c.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-02-m_zps96e3dcab.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-02-m_zps96e3dcab.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-03-m_zps8bb91beb.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-03-m_zps8bb91beb.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-04-m_zps595b8594.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-04-m_zps595b8594.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-05-m_zps62bb858c.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-05-m_zps62bb858c.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-06-m_zpsd938087b.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-06-m_zpsd938087b.jpg" alt=""></div></span></a></li>
+			        	</ul>
+			        	<ul>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-07-m_zpse430b6df.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-07-m_zpse430b6df.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-08-m_zps78a5960e.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-08-m_zps78a5960e.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-09-m_zpsd57e150b.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-09-m_zpsd57e150b.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-10-m_zpsefcd6210.jpg" alt=""><span><div class="testing"><img class="big-pic" src="http://i76.photobucket.com/albums/j39/christopherepearson1/listings%20500-600/0529/0529-10-m_zpsefcd6210.jpg" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://placehold.it/400" alt=""><span><div class="testing"><img class="big-pic" src="http://placehold.it/400" alt=""></div></span></a></li>
+			        		<li><a href="#x"><img class="small-thumb" src="http://placehold.it/400" alt=""><span><div class="testing"><img class="big-pic" src="http://placehold.it/400" alt=""></div></span></a></li>
+			        	</ul>
+		        	</div>
+	        	</div>
+
+	        	<div class="item-details">
+	        		<h1>LAUREN RALPH LAUREN</h1>
+	        		<h3>Women's Knit Top</h3>
+	        		<!-- <p>Super cute round neck short sleeve knit top from LAUREN RALPH LAUREN features snap closure neck and 3 snap closure details on sleeves. Material is a super soft 100% cotton in a white color with black horizontal grouped striped pattern.  This great Polo Shirt is in excellent used condition with no holes tears, snags or stains. Tagged size is Petite's size Petite Small (PS).  See below for some rough measurements taken lying flat and un-stretched. </p> -->
+
+	        		<ul class="nav nav-tabs">
+	        			<li class="active"><a data-toggle="tab" href="#item-details">Details</a></li>
+	        			<li><a data-toggle="tab" href="#item-sizing">Sizing</a></li>
+	        			<li><a data-toggle="tab" href="#item-condition">Condition</a></li>
+	        		</ul>
+	        	 <div class="tab-content">
+	        		<div id="item-details" class="tab-pane fade in active">
+	        			<br>
+ 		        		<dl>
+	        				<dt>Sleeve Style:</dt>
+	        					<dd>Short Sleeve</dd>
+	        				<dt>Neckline:</dt>
+	        					<dd>Round neck</dd>
+	        				<dt>Closure:</dt>
+	        					<dd>Pull-over with 5 snap placket at neck</dd>
+	        				<dt>Embellishments:</dt>
+	        					<dd>3 snap closure detail on sleeves</dd>
+	        				<dt>Material:</dt>
+	        					<dd>100% Cotton knit</dd>
+	        				<dt>Color/Pattern:</dt>
+	        					<dd> Black horizontal grouped stripes on white.</dd>
+	        			</dl>
+	        		</div>
+	        		<div id="item-sizing" class="tab-pane fade">
+	        			<br>
+	        			<dl>
+	        				<dt>Tagged Size:</dt>
+	        					<dd>Petite Small (PS)</dd>
+	        				<dt>Chest:</dt>
+	        					<dd>16" measured straight across armpit to armpit</dd>
+	        				<dt>Shoulders:</dt>
+	        					<dd>13 1/2" measured straight across at shoulder seams</dd>
+	        				<dt>Sleeve length:</dt>
+	        					<dd>9 1/2" from shoulder seam</dd>
+	        				<dt>Overall length:</dt>
+	        					<dd>20 1/2" from nape of neck to bottom hem</dd>
+	        			</dl>
+	        		</div>
+ 					
+ 					<div id="item-condition" class="tab-pane fade">
+ 						<h3>Excellent used condition!</h3>
+ 						<p>No holes tears, snags or stains.  All snaps available and functioning.</p>
+ 					</div>
+	        	</div>
+	        </div>
+	        </div>
+
+		
+		
+		<div class="bottom-notes center-block">
+			<ul class="nav nav-tabs">
+    			<li class="active"><a data-toggle="tab" href="#about-us">About Us</a></li>
+    			<li><a data-toggle="tab" href="#payment">Payment</a></li>
+    			<li><a data-toggle="tab" href="#shipping">Shipping</a></li>
+    		</ul>
+    		<div class="tab-content">
+    		<div id="about-us" class="tab-pane fade in active">
+ 				<br><p>From a smoke-free home with dogs.  Our product is acquired from various sources and we cannot attest to whether previous owners were smoke or pet free. All clothing is sold as pre-owned in excellent condition unless otherwise stated and should be considered sold “as-is”.  We strive to offer the highest quality maternity and other clothing and will do our very best to identify any condition issues in the condition description. Returns will gladly be honored for gross listing errors on our behalf.  Be warned, we have a phobia of irons!</p>
+ 			</div>
+
+ 			<div id="payment" class="tab-pane fade">
+ 				<br><p>Payment by Paypal ONLY.  Expected within 48 hours on auction and ASAP on buy it now items.  Thanks!</p>
+ 				
+ 				<!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo-center/Security_Banner_234x60_4a.gif" border="0" alt="PayPal Logo"></a></td></tr></table><!-- PayPal Logo -->
+ 			
+ 			</div>
+ 			
+ 			<div id="shipping" class="tab-pane fade">
+ 				<br><p>All shipping is via USPS to Paypal verified addresses.  All items will be securely packed and shipped with care and will typically ship within one business day of receiving payment.  Items 13oz and under will ship via 1st Class Package.  Books and CD’s over 13oz will ship via USPS Media Mail.  All other items will ship priority mail.  If you would like to make alternate shipping arrangements, just email us prior to paying.</p>
+ 				<p>For our INTERNATIONAL customers, all shipping will be via the Ebay Global Shipping Program.  If your country is not included in the program, please contact us before bidding/purchasing.  Thank you!</p>
+ 				<p>Of course we will combine shipping! Just request an invoice PRIOR to paying!</p>
+ 			</div>
+ 			</div>
+ 		</div>
+		</div>	
+	</body>
+
+</html>
