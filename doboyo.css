@@ -126,21 +126,22 @@
 		outline:0;
 	}
 
-	.listing-template .listing-content .gallery-container .thumb-set li a span {
+	.listing-template .listing-content .gallery-container .thumb-set li a .lg-cont {
 		position:absolute; left:-9999px; display:block; width:400px; height:400px; background:#2B596F; 
 	}
 
-	.listing-template .listing-content .gallery-container .thumb-set li a span .testing {display:block; width:400px; height:400px; text-align:center; display:table-cell; vertical-align:middle;
+	.listing-template .listing-content .gallery-container .thumb-set li a .lg-cont .testing {display:block; width:400px; height:400px; text-align:center; display:table-cell; vertical-align:middle;
 	}
 
-	.listing-template .listing-content .gallery-container .thumb-set li a:hover span {
+	.listing-template .listing-content .gallery-container .thumb-set li a:hover .lg-cont {
 		position:absolute; left:2px; top:-427px; z-index:100;
 	}
 
-	.listing-template .listing-content .gallery-container .thumb-set li a:active span,
-	.listing-template .listing-content .gallery-container .thumb-set li a:focus span {
+	.listing-template .listing-content .gallery-container .thumb-set li a:active .lg-cont,
+	.listing-template .listing-content .gallery-container .thumb-set li a:focus .lg-cont {
 		position:absolute; left:2px; top:-427px; 
 	}
+	
 
 	.listing-template .listing-content .item-details {
 		height:600px;
