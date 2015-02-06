@@ -1,3 +1,195 @@
-body {
+	body {
 		
+	}
+
+	.listing-template {
+		max-width: 750px;
+		background-color: #7496a7;
+		border: 1px solid #000;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.listing-template .section-hdr {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.listing-template .section-hdr .top-logo {
+		max-width:350px;
+		/*margin-left: 200px;*/
+	}
+
+	.listing-template .nav-bar {
+		width:748px;
+	}
+
+	.listing-template .nav-bar ul {
+		padding-left: 2px;
+		padding-right: 5px;
+	}
+
+	.listing-template .nav-bar a {
+  		color: #D7E3E9;
+  		font-family: oswald, sans-serif;
+  		font-size: 14px;
+  		font-weight: 300;
+  		padding: 8px;
+    	text-transform: uppercase;
+	}
+
+	.listing-template .nav-bar li {
+		display:inline-block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border: 1px solid #D7E3E9;
+	}
+
+	.listing-template .nav-bar li:hover {
+    	background-color:#2B596F;
+	}
+
+	.listing-template .listing-content {
+		padding-top:15px;
+		padding-bottom: 15px;
+		border: 0px solid #D7E3E9;
+	}
+
+	.listing-template .listing-content .gallery-container {
+		height: 600px;
+		width:420px;
+		border: 1px solid #D7E3E9;
+		float:left;
+	}
+
+	.listing-template .listing-content .gallery-container .big-pic-box {
+		height: 404px;
+		width:404px;
+		position:relative; 
+		left:5px; 
+		top:5px; 
+		background-color:#2B596F;
+		border: 1px solid #D7E3E9;
+	}
+
+	.listing-template .listing-content .gallery-container .default {
+		position:relative; 
+		left:0px; 
+		top:0px; 
+		border:1px solid #D7E3E9; 
+		opacity: 0.25;
+		z-index:0;
+		max-height: 402px;
+		max-width: 402px;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set {
+		position:relative; 
+		height:150px;
+		width:404px;
+		left:5px; 
+		top:30px; 
+		/*background-color:#2B596F;
+		border: 1px solid #D7E3E9;*/
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set ul {
+		list-style:none; 
+		padding:5px; 
+		margin:0;
+		float:left;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li {
+		display:inline; width:65px; height:65px; float:left; padding-left:5px;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a {
+		display:block; width:55px; height:55px; text-decoration:none; padding:0px; border:1px solid #fff;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a .small-thumb {
+		width:53px; height:53px; border:0;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a .big-pic {
+		max-height: 400px;
+		max-width: 400px;
+
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a:hover,
+	.listing-template .listing-content .gallery-container .thumb-set li a:active,
+	.listing-template .listing-content .gallery-container .thumb-set li a:focus {
+		white-space:normal; 
+		border-color:#2B596F; 
+		outline:0;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a span {
+		position:absolute; left:-9999px; display:block; width:400px; height:400px; background:#2B596F; 
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a span .testing {display:block; width:400px; height:400px; text-align:center; display:table-cell; vertical-align:middle;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a:hover span {
+		position:absolute; left:2px; top:-427px; z-index:100;
+	}
+
+	.listing-template .listing-content .gallery-container .thumb-set li a:active span,
+	.listing-template .listing-content .gallery-container .thumb-set li a:focus span {
+		position:absolute; left:2px; top:-427px; 
+	}
+
+	.listing-template .listing-content .item-details {
+		height:600px;
+		width: 281px;
+		border: 0px solid #D7E3E9;
+		margin-left: 15px;
+		padding:5px;
+		float:left;
+	}
+
+	.listing-template .listing-content .item-details h1 {
+    	font-family: 'Oswald', sans-serif;
+    	color:#D7E3E9;
+    	font-size: 24px;
+    	font-weight: 600;
+    	text-align: justify;
+    	padding-bottom: 0px;
+    	line-height:0.75;
+	}
+
+	.listing-template .listing-content .item-details h3 {
+		font-family: 'Oswald', sans-serif;
+    	color:#9e3754;
+    	font-size: 20px;
+    	font-weight: 400;
+    	padding-top: 0;
+    	padding-bottom: 10px;
+    	line-height:0.75;
+	}
+
+	.listing-template .listing-content .item-details .nav-tabs .active a {
+    	background-color: #2B596F;
+    	color:#D7E3E9;
+    	border-color: #D7E3E9;
+	} 
+
+	.listing-template .listing-content .bottom-notes {
+		width:600px;
+		height:275px;
+		border: 0px solid #D7E3E9;
+		margin-top: 15px
+	}
+
+	.listing-template .listing-content .bottom-notes .nav-tabs .active a {
+    	background-color: #2B596F;
+    	color:#D7E3E9;
+    	border-color: #D7E3E9;
+	} 
+
+	.nav-tabs a {
+		color:#333;
 	}
