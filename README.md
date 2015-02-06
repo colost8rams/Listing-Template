@@ -6,6 +6,6 @@ This is my first attempt at authoring a web page in about 16 years! so I am basi
 Any feedback would be greatly appreciated!
 
 NOTES:
-The CSS would normally be a separate file, but I have been told that Ebay prefers the CSS in your listing to be in the html document, not linked.
+~~The CSS would normally be a separate file, but I have been told that Ebay prefers the CSS in your listing to be in the html document, not linked.~~ **FIXED!** :smile:
 
-NEED HELP!:  The image gallery seems to be working OK, but I am pretty sure my code violates pretty much all convention.  Is there a better way to do this that does not require javascript?  (another ebay requirement).
+~~NEED HELP!:  The image gallery seems to be working OK, but I am pretty sure my code violates pretty much all convention.  Is there a better way to do this that does not require javascript?  (another ebay requirement).~~ **FIXED!** :smile:
